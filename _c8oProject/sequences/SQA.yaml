@@ -1,0 +1,12 @@
+↓Input_variables [steps.InputVariablesStep-1592210315858]: 
+↓Element [steps.XMLElementStep-1592207998837]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1592210315858
+        - java.lang.String: 
+          - ↑value: ./from/text()
+↓from [variables.RequestableVariable-1592210217489]: 
+  value: ${dynamicEndpoint.from}

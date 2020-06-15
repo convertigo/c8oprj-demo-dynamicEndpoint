@@ -1,0 +1,36 @@
+segment: path-to-page1
+title: Title for Page1
+↓Content [mobile.components.UIDynamicElement-1592213148064]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Button2 [mobile.components.UIDynamicElement-1592213265115]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: button
+    ↓Event [mobile.components.UIControlEvent-1592213265118]: 
+      ↓RootPage [mobile.components.UIDynamicAction-1592213265121]: 
+        beanData: '{"ionBean":"RootPageAction","page":"plain:dynamicEndpoint.MobileApplication.Application.Page"}'
+    ↓Text [mobile.components.UIText-1592213265124]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:<-
+  ↓Button [mobile.components.UIDynamicElement-1592213161369]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: button
+    ↓Event [mobile.components.UIControlEvent-1592213161372]: 
+      ↓CallSequence [mobile.components.UIDynamicAction-1592213161381]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:dynamicEndpoint.SQA"}'
+        ↓Toast [mobile.components.UIDynamicAction-1592213161384]: 
+          beanData: |
+            '{
+             "ionBean": "ToastAction",
+             "message": "script:out.element",
+             "duration": "plain:30000",
+             "position": "plain:middle",
+             "showCloseButton": "plain:true"
+            }'
+    ↓Text [mobile.components.UIText-1592213161387]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Call SQ

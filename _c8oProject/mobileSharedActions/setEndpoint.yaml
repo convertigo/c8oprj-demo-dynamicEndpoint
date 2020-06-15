@@ -1,0 +1,46 @@
+↓C8oSettings [mobile.components.UICustomAction-1592207140800]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		    page.c8o.log.debug("current endpoint is: " + page.c8o.endpoint);
+          	        let settings = new C8oSettings()
+          	        .setLogRemote(true)
+          	        .setLogC8o(true)
+          	        .setLogLevelLocal(C8oLogLevel.DEBUG)
+          	        .setKeepSessionAlive(true)
+          	        .setEndPoint(vars.endpoint);
+          	        
+          	        page.c8o.init(settings);
+          	        page.c8o.finalizeInit()
+          	        .then((res)=>{
+          	            page.c8o.log.debug("new endpoint is: " + page.c8o.endpoint);
+          	        });
+          	        
+          	        resolve();
+          '
+  page_ts_imports: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: C8oSettings
+            - java.lang.String: 
+              - ↑value: c8osdkangular
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: C8oLogLevel
+            - java.lang.String: 
+              - ↑value: c8osdkangular
+  ↓endpoint [mobile.components.UIControlVariable-1592207157826]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.endPoint
+↓endPoint [mobile.components.UIStackVariable-1592207740105]: 

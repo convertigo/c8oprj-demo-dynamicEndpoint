@@ -1,0 +1,15 @@
+↑convertigo: 7.7.0.m006
+↓dynamicEndpoint [core.Project]: 
+  comment: Convertigo Mobile builder Project
+  corsOrigin: =Origin
+  version: 1.0
+  ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓SQA [sequences.GenericSequence]: 🗏 sequences/SQA.yaml
+  ↓MobileApplication [core.MobileApplication]: 
+    comment: Describes the mobile application global properties
+    splashRemoveMode: beforeUpdate
+    ↓Android [mobileplatforms.Android]: 
+      comment: Android platform
+    ↓iOS [mobileplatforms.IOs]: 
+      comment: iOS platform
+    ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml
