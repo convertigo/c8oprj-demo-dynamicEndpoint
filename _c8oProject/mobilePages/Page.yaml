@@ -31,7 +31,7 @@ title: First page
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:My First App
+            - MobileSmartSourceType: plain:Dynamic Endpoint
     ↓Button [mobile.components.UIDynamicElement-1491634442029]: 
       beanData: |
         '{
@@ -61,68 +61,6 @@ title: First page
     beanData: '{"ionBean":"Button"}'
     tagName: button
     ↓Event [mobile.components.UIControlEvent-1591795417621]: 
-      ↓CustomAction [mobile.components.UICustomAction-1591795524930]: 
-        actionValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-            - com.twinsoft.convertigo.beans.common.FormatedContent: 
-              →: |
-                '		/*    page.c8o.log.debug("mon Log avant changement de endpoint");
-                		let settings = new C8oSettings()
-                		.setLogRemote(true)
-                        .setLogC8o(true)
-                        .setLogLevelLocal(C8oLogLevel.DEBUG)
-                        .setKeepSessionAlive(true)
-                        .setEndPoint("https://test-convertigo.convertigo.net/convertigo/projects/C8oForms");
-                        
-                		page.c8o.init(settings);
-                		page.c8o.finalizeInit()
-                		.then((res)=>{
-                		    page.c8o.log.debug("mon Log aprés changement de endpoint");
-                		})
-                		
-                		resolve();
-                		*/
-                		    page.c8o.log.debug("current endpoint is: " + page.c8o.endpoint);
-                            let settings = new C8oSettings()
-                            .setLogRemote(true)
-                            .setLogC8o(true)
-                            .setLogLevelLocal(C8oLogLevel.DEBUG)
-                            .setKeepSessionAlive(true)
-                            .setEndPoint(vars.endpoint);
-                            
-                            page.c8o.init(settings);
-                            page.c8o.finalizeInit()
-                            .then((res)=>{
-                                page.c8o.log.debug("new endpoint is: " + page.c8o.endpoint);
-                            });
-                            
-                            resolve();
-                '
-        isEnabled: false
-        page_ts_imports: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-                - com.twinsoft.convertigo.beans.common.XMLVector: 
-                  - java.lang.String: 
-                    - ↑value: C8oSettings
-                  - java.lang.String: 
-                    - ↑value: c8osdkangular
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-                - com.twinsoft.convertigo.beans.common.XMLVector: 
-                  - java.lang.String: 
-                    - ↑value: C8oLogLevel
-                  - java.lang.String: 
-                    - ↑value: c8osdkangular
-        ↓endPoint [mobile.components.UIControlVariable-1592209111109]: 
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:http://localhost:18080/convertigo/projects/dynamicEndpoint
       ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1592207729732]: 
         beanData: '{"ionBean":"InvokeAction"}'
         stack: dynamicEndpoint.MobileApplication.Application.setEndpoint
@@ -170,74 +108,22 @@ title: First page
                "position": "plain:middle",
                "showCloseButton": "plain:true"
               }'
-      ↓CustomAction [mobile.components.UICustomAction-1592209087798]: 
-        actionValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-            - com.twinsoft.convertigo.beans.common.FormatedContent: 
-              →: |
-                '		    /*    page.c8o.log.debug("mon Log avant changement de endpoint");
-                	        let settings = new C8oSettings()
-                	        .setLogRemote(true)
-                	        .setLogC8o(true)
-                	        .setLogLevelLocal(C8oLogLevel.DEBUG)
-                	        .setKeepSessionAlive(true)
-                	        .setEndPoint("https://test-convertigo.convertigo.net/convertigo/projects/C8oForms");
-                	        
-                	        page.c8o.init(settings);
-                	        page.c8o.finalizeInit()
-                	        .then((res)=>{
-                	            page.c8o.log.debug("mon Log aprés changement de endpoint");
-                	        })
-                	        
-                	        resolve();
-                	        */
-                	            page.c8o.log.debug("current endpoint is: " + page.c8o.endpoint);
-                	            let settings = new C8oSettings()
-                	            .setLogRemote(true)
-                	            .setLogC8o(true)
-                	            .setLogLevelLocal(C8oLogLevel.DEBUG)
-                	            .setKeepSessionAlive(true)
-                	            .addHeader("x-convertigo-mb", "7.7.0")
-                	            .setEndPoint(vars.endpoint);
-                	            
-                	            page.c8o.init(settings);
-                	            page.c8o.finalizeInit()
-                	            .then((res)=>{
-                	                page.c8o.log.debug("new endpoint is: " + page.c8o.endpoint);
-                	            });
-                	            
-                	            resolve();
-                '
-        isEnabled: false
-        page_ts_imports: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-            - com.twinsoft.convertigo.beans.common.XMLVector: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-                - com.twinsoft.convertigo.beans.common.XMLVector: 
-                  - java.lang.String: 
-                    - ↑value: C8oSettings
-                  - java.lang.String: 
-                    - ↑value: c8osdkangular
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-                - com.twinsoft.convertigo.beans.common.XMLVector: 
-                  - java.lang.String: 
-                    - ↑value: C8oLogLevel
-                  - java.lang.String: 
-                    - ↑value: c8osdkangular
-        ↓endPoint [mobile.components.UIControlVariable-1592209173043]: 
-          varValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:https://confirmed.convertigo.net/convertigo/projects/dynamicEndpoint
     ↓Text [mobile.components.UIText-1591795506320]: 
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:endpoint PROD
+  ↓Button2 [mobile.components.UIDynamicElement-1592239999975]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: button
+    ↓Event [mobile.components.UIControlEvent-1592239999978]: 
+      ↓RootPage [mobile.components.UIDynamicAction-1592240026889]: 
+        beanData: '{"ionBean":"RootPageAction","page":"plain:dynamicEndpoint.MobileApplication.Application.Page1"}'
+    ↓Text [mobile.components.UIText-1592239999993]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Next page
 ↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

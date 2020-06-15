@@ -27,6 +27,7 @@ tplProjectName: mobilebuilder_tpl_7_7_0
 ↓Menu [mobile.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓setEndpoint [mobile.components.UIActionStack-1592207053444]: 🗏 mobileSharedActions/setEndpoint.yaml
 ↓Page [mobile.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
+↓Page1 [mobile.components.PageComponent-1592240032971]: 🗏 mobilePages/Page1.yaml
 ↓Theme [mobile.components.UITheme-1491635018260]: 
   comment: Global color themes can be customized here
   styleContent: 

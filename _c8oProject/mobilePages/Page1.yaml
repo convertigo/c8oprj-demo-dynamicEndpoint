@@ -1,26 +1,68 @@
+comment: My First Page as root page
+preloadPriority: high
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
 segment: path-to-page1
 title: Title for Page1
-↓Content [mobile.components.UIDynamicElement-1592213148064]: 
+↓Header [mobile.components.UIDynamicElement-1592240033015]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1592240033018]: 
+    beanData: '{"ionBean":"NavBar"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1592240033021]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1592240033024]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:New Page
+    ↓Button [mobile.components.UIDynamicElement-1592240033027]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "ButtonFormType": "plain:false",
+         "MenuMode": "plain:menuToggle"
+        }'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1592240033030]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1592240033033]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1592240033036]: 
+        beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1592240033039]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
+↓Content [mobile.components.UIDynamicElement-1592240033042]: 
   beanData: '{"ionBean":"Content"}'
+  comment: Page content
   tagName: ion-content
-  ↓Button2 [mobile.components.UIDynamicElement-1592213265115]: 
+  ↓Button1 [mobile.components.UIDynamicElement-1592240033066]: 
     beanData: '{"ionBean":"Button"}'
     tagName: button
-    ↓Event [mobile.components.UIControlEvent-1592213265118]: 
-      ↓RootPage [mobile.components.UIDynamicAction-1592213265121]: 
-        beanData: '{"ionBean":"RootPageAction","page":"plain:dynamicEndpoint.MobileApplication.Application.Page"}'
-    ↓Text [mobile.components.UIText-1592213265124]: 
-      textValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:<-
-  ↓Button [mobile.components.UIDynamicElement-1592213161369]: 
-    beanData: '{"ionBean":"Button"}'
-    tagName: button
-    ↓Event [mobile.components.UIControlEvent-1592213161372]: 
-      ↓CallSequence [mobile.components.UIDynamicAction-1592213161381]: 
+    ↓Event [mobile.components.UIControlEvent-1592240033069]: 
+      ↓CallSequence [mobile.components.UIDynamicAction-1592240083395]: 
         beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:dynamicEndpoint.SQA"}'
-        ↓Toast [mobile.components.UIDynamicAction-1592213161384]: 
+        ↓Toast [mobile.components.UIDynamicAction-1592240083398]: 
           beanData: |
             '{
              "ionBean": "ToastAction",
@@ -29,8 +71,48 @@ title: Title for Page1
              "position": "plain:middle",
              "showCloseButton": "plain:true"
             }'
-    ↓Text [mobile.components.UIText-1592213161387]: 
+    ↓Text [mobile.components.UIText-1592240033084]: 
       textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:Call SQ
+          - MobileSmartSourceType: plain:Call Sequence
+  ↓Button2 [mobile.components.UIDynamicElement-1592240033087]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: button
+    ↓Event [mobile.components.UIControlEvent-1592240033090]: 
+      ↓RootPage [mobile.components.UIDynamicAction-1592240033093]: 
+        beanData: '{"ionBean":"RootPageAction","page":"plain:dynamicEndpoint.MobileApplication.Application.Page"}'
+    ↓Text [mobile.components.UIText-1592240033096]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Previous page
+↓Footer [mobile.components.UIDynamicElement-1592240033099]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1592240033102]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [mobile.components.UIDynamicElement-1592240033105]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:left"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1592240033108]: 
+        beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1592240033111]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 1
+    ↓ButtonSet1 [mobile.components.UIDynamicElement-1592240033114]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1592240033117]: 
+        beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1592240033120]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 2
