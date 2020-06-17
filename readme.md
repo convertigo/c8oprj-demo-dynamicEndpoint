@@ -2,6 +2,21 @@
 
 This Mobile Builder demo project demonstrates the ability to dynamically set a new server endpoint address that differs from the one the application platform was built with.
 
+Made with **Convertigo Studio 7.6.3 build 04544** and patched TPL 7.6.0\
+package.json:
+
+```json
+ "dependencies": {
+     ...
+    "@types/node": "12.12.6"
+ },
+"devDependencies": {
+    "@ionic/app-scripts": "3.2.4",
+    "typescript": "3.9.5"
+}
+```
+Project will work with Convertigo 7.6+ but needs patched TPL 7.6.0 and 7.7.0 and works natively with TPL 7.8.0+
+
 ## Background
 
 When you build a Mobile Builder application for a platform (iOS, Android), the endpoint Url is **hardcoded** in the project's package. By default, it comes from the url address you typed to access the Test Platform of the project, or it can be set by the **Convertigo server endpoint** property of the **MobileApplication** object in your project. This address is used to perform the Flash Update of your application and to connect to the project's sequences or transactions. It looks like:
