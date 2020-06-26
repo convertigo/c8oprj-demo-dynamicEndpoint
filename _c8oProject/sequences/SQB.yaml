@@ -1,0 +1,27 @@
+↓Input_variables [steps.InputVariablesStep-1593185686144]: 
+↓Element [steps.XMLElementStep-1593185686147]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1593185686144
+        - java.lang.String: 
+          - ↑value: ./from/text()
+↓Call_Transaction [steps.TransactionStep-1593185734634]: 
+  sourceTransaction: dynamicEndpoint.dynamicendpoint_fullsync.PostDocument
+  ↓_id [variables.StepVariable-1593185734636]: 
+    description: Document id
+    value: test_endpoint
+  ↓data [variables.StepVariable-1593185734638]: 
+    description: Document content
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1593185686144
+          - java.lang.String: 
+            - ↑value: ./from/text()
+↓from [variables.RequestableVariable-1593185686150]: 
+  value: ${dynamicEndpoint.from}

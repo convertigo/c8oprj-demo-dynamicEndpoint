@@ -124,6 +124,43 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Next page
+  ↓Break [mobile.components.UIDynamicElement-1593174309676]: 
+    beanData: '{"ionBean":"Break"}'
+    selfClose: true
+    tagName: br
+  ↓Button3 [mobile.components.UIDynamicElement-1593174316502]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: button
+    ↓Event [mobile.components.UIControlEvent-1593174316505]: 
+      ↓CallSequence [mobile.components.UIDynamicAction-1593185875530]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:dynamicEndpoint.SQB"}'
+        ↓SyncData [mobile.components.UIDynamicAction-1593174455022]: 
+          beanData: |
+            '{
+             "ionBean": "FullSyncSyncAction",
+             "requestable": "plain:dynamicEndpoint.dynamicendpoint_fullsync",
+             "Direction": "plain:pull"
+            }'
+          ↓GetData [mobile.components.UIDynamicAction-1593174513380]: 
+            beanData: |
+              '{
+               "ionBean": "FullSyncGetAction",
+               "requestable": "plain:dynamicEndpoint.dynamicendpoint_fullsync",
+               "_id": "plain:test_endpoint",
+               "__live": "plain:ID1"
+              }'
+            ↓SetGlobal [mobile.components.UIDynamicAction-1593174648067]: 
+              beanData: |
+                '{
+                 "ionBean": "SetGlobalAction",
+                 "Property": "plain:data",
+                 "Value": "script:out.data"
+                }'
+    ↓Text [mobile.components.UIText-1593174316520]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:SYNC & GET
 ↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
@@ -141,7 +178,15 @@ title: First page
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Action 1
+              - MobileSmartSourceType: plain:reset
+        ↓Event [mobile.components.UIControlEvent-1593175230084]: 
+          ↓SetGlobal [mobile.components.UIDynamicAction-1593175249491]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:data",
+               "Value": "script:undefined"
+              }'
     ↓ButtonSet1 [mobile.components.UIDynamicElement-1491634373539]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
       tagName: ion-buttons
@@ -152,4 +197,4 @@ title: First page
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Action 2
+              - MobileSmartSourceType: source:{"filter":"Global","project":"dynamicEndpoint","input":"router.sharedObject?.data"}

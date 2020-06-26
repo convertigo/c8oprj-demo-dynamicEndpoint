@@ -27,11 +27,16 @@ This means that you can connect to any other Convertigo server and Back Office p
 The demo project uses a symbol named **dynamicEndpoint.from**.
 Set it to **STUDIO**, for example, in your Studio Administration Console.
 
-In the first page of the appplication, there are three buttons:
+In the first page of the appplication, there are 4 buttons:
 
 1. **ENDPOINT DEV** button sets the endpoint url to your local Studio address (http://localhost:18080/convertigo/projects/dynamicEndpoint). To test on a specific platform and device use your IP address. Then, it calls the **SQA** sequence and should display a toast message **STUDIO**
 2.  **ENDPOINT PROD** button sets the endpoint url to a Convertigo Cloud Server project (https://confirmed.convertigo.net/convertigo/projects/dynamicEndpoint) that has the same project (for simplicity but not necessary) deployed and the **dynamicEndpoint.from** symbol set to **SERVER**. Then, it calls the **SQA** sequence and should display a toast message **SERVER**
 3. **NEXT PAGE** button only roots to a new page to demonstrate that the new server endpoint is global to the application.
+4. **SYNC & GET** button creates a document server-side with id **test_endpoint** and key/value pair 
+
+    `data: "<dynamicEndpoint.from symbol value (STUDIO or SERVER)>"`
+
+    It synchronizes with the new fullsync database endpoint and creates locally a new IndexDB database with a hash suffix based on the endpoint value (to avoid data mix and need to perform a reset on the same Fullsync DB name) and pull the document. The document **data** value is displayed in the right corner of the footer. The **RESET** button only resets the displayed value.
 
 In the second page of the appplication, there are 2 buttons:
 

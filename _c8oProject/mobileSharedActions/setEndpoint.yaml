@@ -5,12 +5,15 @@
       - com.twinsoft.convertigo.beans.common.FormatedContent: 
         →: |
           '		    page.c8o.log.debug("current endpoint is: " + page.c8o.endpoint);
+          		    // Generate hash code from endpoint value
+          		    let hashCode=s=>{for(var i=0,h;i<s.length;i++)h=Math.imul(31,h)+s.charCodeAt(i)|0;return h};
           	        let settings = new C8oSettings()
           	        .setLogRemote(true)
           	        .setLogC8o(true)
           	        .setLogLevelLocal(C8oLogLevel.DEBUG)
           	        .setKeepSessionAlive(true)
-          	        .setEndPoint(vars.endpoint);
+          	        .setEndPoint(vars.endpoint)
+          	        .setFullSyncLocalSuffix("_" + hashCode(vars.endpoint));
           	        
           	        page.c8o.init(settings);
           	        page.c8o.finalizeInit()

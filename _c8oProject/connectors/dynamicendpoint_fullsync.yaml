@@ -1,0 +1,12 @@
+databaseName: dynamicendpoint_fullsync
+↓GetServerInfo [transactions.couchdb.GetServerInfoTransaction]: 
+  ↑default: true
+↓PostDocument [transactions.couchdb.PostDocumentTransaction]: 
+  fullSyncAclPolicy: anonymous
+  policy: override
+  ↓_id [variables.RequestableVariable-1593174184709]: 
+    description: Document id
+    value: test_endpoint
+  ↓data [variables.RequestableVariable-1593174184711]: 
+    description: Document content
+    value: ${dynamicEndpoint.from}

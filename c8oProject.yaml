@@ -3,8 +3,10 @@
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
   version: 1.0
+  ↓dynamicendpoint_fullsync [connectors.FullSyncConnector]: 🗏 connectors/dynamicendpoint_fullsync.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓SQA [sequences.GenericSequence]: 🗏 sequences/SQA.yaml
+  ↓SQB [sequences.GenericSequence]: 🗏 sequences/SQB.yaml
   ↓MobileApplication [core.MobileApplication]: 
     comment: Describes the mobile application global properties
     splashRemoveMode: beforeUpdate
@@ -13,3 +15,5 @@
     ↓iOS [mobileplatforms.IOs]: 
       comment: iOS platform
     ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml
+  ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
+    urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
