@@ -11,7 +11,7 @@ When you build a Mobile Builder application for a platform (iOS, Android), the e
 ## Dynamically set server endpoint url
 
 It is possible to override the server endpoint url at application runtime.\
-Copy the **setEndpoint** sharedAction component from the demo project to your own project.\
+Use the **setEndpoint** sharedAction component from the demo project or copy it to your own project.\
 In an event, use the sharedAction providing it the **endpoint** variable value set to an absolute Convertigo project url:
 
 `http<s>://<convertigo_address><:port>/convertigo/projects/<project_name>`
