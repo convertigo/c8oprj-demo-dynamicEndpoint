@@ -13,7 +13,8 @@
           	        .setLogLevelLocal(C8oLogLevel.DEBUG)
           	        .setKeepSessionAlive(true)
           	        .setEndPoint(vars.endpoint)
-          	        .setFullSyncLocalSuffix("_" + hashCode(vars.endpoint));
+          	        .setFullSyncLocalSuffix("_" + hashCode(vars.endpoint))
+          		    .addHeader("x-convertigo-mb", "7.7.0");
           	        
           	        page.c8o.init(settings);
           	        page.c8o.finalizeInit()
