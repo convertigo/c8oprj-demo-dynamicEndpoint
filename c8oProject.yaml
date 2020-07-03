@@ -85,7 +85,8 @@
                   	        .setLogC8o(true)
                   	        .setLogLevelLocal(C8oLogLevel.DEBUG)
                   	        .setKeepSessionAlive(true)
-                  	        .setEndPoint(vars.endpoint);
+                  	        .setEndPoint(vars.endpoint)
+                  	        .addHeader("x-convertigo-mb", "7.6.3");
                   	        
                   	        page.c8o.init(settings);
                   	        page.c8o.finalizeInit()
